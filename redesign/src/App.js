@@ -3,6 +3,7 @@ import Login from './components/Login';
 import { useEffect, useState } from "react";
 import { getTokenFromUrl } from "./spotify";
 import SpotifyWebApi from 'spotify-web-api-js'
+import Player from './components/Player';
 
 
 const spotify = new SpotifyWebApi(); // allows us to communicate to the spotify api
@@ -34,7 +35,7 @@ function App() {
     <div className="App">
       {
         token ? (
-          <h1>I am logged in</h1>
+          <Player />
         ): (
           <Login />
         )
