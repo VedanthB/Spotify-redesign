@@ -1,4 +1,5 @@
 import './Login.css'
+import { loginUrl } from "../spotify";
 
 function Login() {
     return (
@@ -7,7 +8,7 @@ function Login() {
              src='https://cdn.dribbble.com/users/441326/screenshots/3165191/spotify-gif---oliver-keane.gif'
              alt='logo'
             />
-            <a>Login With Spotify</a>
+            <a href={loginUrl} >Login With Spotify</a>
         </div>
     )
 }
