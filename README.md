@@ -4,7 +4,7 @@
  
 - Link to Live App: https://spotifyyyyyyyy-79f6b.web.app
  
-#Key Takeaways
+# Key Takeaways
 
 - React
 - Context Api For state managemant
