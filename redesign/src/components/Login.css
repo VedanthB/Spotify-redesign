@@ -29,3 +29,14 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+.login >p{
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .login >p span{
+    font-size: 18px;
+    color: red;
+    height: 20px;
+  }

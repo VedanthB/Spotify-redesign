@@ -10,7 +10,7 @@ import { useStateValue } from "./StateProvider"
 const spotify = new SpotifyWebApi(); // allows us to communicate to the spotify api
 
 function App() {
-  const [{ user, token }, dispatch] = useStateValue();
+  const [{  token }, dispatch] = useStateValue();
  
   useEffect(() => {
     //to track any change in the access token
@@ -27,7 +27,7 @@ function App() {
 
       spotify.setAccessToken(_token)
 
-      spotify.getMe().then(user => {
+      spotify.getMe().then((user) => {
         // console.log('>>>>', user)
 
         dispatch({ 
@@ -37,14 +37,39 @@ function App() {
       })
     }
 
-    console.log('i have a token', token)
-  }, [])
+    spotify.getUserPlaylists().then((playlists) => {
+       dispatch({ 
+         type: "SET_PLAYLISTS",
+         playlists: playlists,
+       })
+    })
+   
+    spotify.getPlaylist('2RzJMQA22Uw7iv3LZ2IbTp').then((response) =>
+    dispatch({
+      type: "SET_DISCOVER_WEEKLY",
+      discover_weekly: response,
+    })
+   );
 
-  console.log('>>>>', user)
+   spotify.getMyTopArtists().then((response) =>
+      dispatch({
+        type: "SET_TOP_ARTISTS",
+        top_artists: response,
+      })
+     );
+
+     dispatch({
+       type: "SET_SPOTIFY",
+       spotify: spotify,
+     });
+
+  }, [token, dispatch])
+
+  // console.log('>>>>', user)
   console.log('<<<<', token)
 
   return (
-    <div className="App">
+    <div className="app">
       {
         token ? (
           <Player spotify={spotify} />

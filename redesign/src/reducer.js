@@ -1,4 +1,4 @@
-import { findAllByDisplayValue } from "@testing-library/react";
+// import { findAllByDisplayValue } from "@testing-library/react";
 
 export const initialState = {
   user: null,
@@ -7,7 +7,7 @@ export const initialState = {
   discover_weekly: null,
   top_artists: null,
   playing: false,
-  token: 'BQCEuFCXZQGoBuRzdUDElVAd7U2KmolBxE14UZM4sbZuyKKCwULrFYKVOb1eqVGfdGuPqTt-t9KigTQSsFtH7cNoD70CH7_MVfUKvViok_5vx_RBlKPNw0gsZNNoM1Z854-guO3-F8GPblVp36H0bzL2p5J8kcbZmDmOyqA2x6y8Azf4EAe8',
+  token: null,
   item: null,
 };
 
