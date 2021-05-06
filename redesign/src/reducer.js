@@ -7,7 +7,7 @@ export const initialState = {
   discover_weekly: null,
   top_artists: null,
   playing: false,
-  token: 'BQDCqbmHDNwZjc4RZQHaP2ew7qRKSZ92901g6R9EtoAiLRS4gHJu7VS6d04oz7IDxfwspbo5n2u6PflaO-gbsOgA0pYeHMmkOxn6p6MTFvfHX8dsBqBpEEeahLYVC553nSMEo2aWF8hFEDkdB_6kNDx5IN99zXxdJs342n2bX02f51V5jpZx-vJQX6lezyAZ-1EhjC9hEkS4fwDXA9SmBCMu8lV_RLIqQkbMy7xLP_nu_iygeLmmdGuZleHV-towlz9wxPwRycNv8hYXSunXXKurqALUK9XqB2QN8OL9CFRf',
+  token: null,
   item: null,
 };
 

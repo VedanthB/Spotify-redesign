@@ -43,7 +43,25 @@ function App() {
          playlists: playlists,
        })
     })
+   
+    spotify.getPlaylist('2RzJMQA22Uw7iv3LZ2IbTp').then((response) =>
+    dispatch({
+      type: "SET_DISCOVER_WEEKLY",
+      discover_weekly: response,
+    })
+   );
 
+   spotify.getMyTopArtists().then((response) =>
+      dispatch({
+        type: "SET_TOP_ARTISTS",
+        top_artists: response,
+      })
+     );
+
+     dispatch({
+       type: "SET_SPOTIFY",
+       spotify: spotify,
+     });
 
   }, [token, dispatch])
 
@@ -51,7 +69,7 @@ function App() {
   console.log('<<<<', token)
 
   return (
-    <div className="App">
+    <div className="app">
       {
         token ? (
           <Player spotify={spotify} />
