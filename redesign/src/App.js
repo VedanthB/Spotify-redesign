@@ -48,7 +48,7 @@ function App() {
   }, [token, dispatch])
 
   // console.log('>>>>', user)
-  // console.log('<<<<', token)
+  console.log('<<<<', token)
 
   return (
     <div className="App">
