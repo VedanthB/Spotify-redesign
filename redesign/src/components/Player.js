@@ -1,9 +1,19 @@
+import Body from './Body'
+import Footer from './Footer'
 import './Player.css'
+import Sidebar from './Sidebar'
 
-function Player() {
+function Player({ spotify }) {
     return (
         <div className='player'>
-            <h1>welcome to spotify</h1>
+            <div className='player__body' >
+                {/* sidebar */}
+                <Sidebar />
+                {/* body */}
+                <Body />
+            </div>
+             {/* footer */}
+             <Footer />
         </div>
     )
 }
