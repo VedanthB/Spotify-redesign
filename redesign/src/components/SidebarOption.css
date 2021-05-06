@@ -1,0 +1,12 @@
+.sidebarOption {
+    color: grey;
+    height: 40px;
+    cursor: pointer;
+    transition: 200ms color ease-in;
+    font-weight: 600;
+}
+
+.sidebarOption:hover {
+    color: rgb(255, 0, 221)
+}
+
